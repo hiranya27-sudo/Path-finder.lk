@@ -18,9 +18,9 @@ class FixtureJobTests(unittest.TestCase):
 
         source = FixtureJobSource(FIXTURE_PATH)
 
-    self.assertEqual(source.source_key, "fixture")
-    self.assertTrue(source.is_fixture)
-    self.assertTrue(source.fetch_jobs())
+        self.assertEqual(source.source_key, "fixture")
+        self.assertTrue(source.is_fixture)
+        self.assertTrue(source.fetch_jobs())
 
     def test_loader_rejects_duplicate_source_ids(self) -> None:
         fixture = [
